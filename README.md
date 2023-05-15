@@ -4,42 +4,39 @@ brewUpdate is a simple bash script that automatically updates, upgrades, and cle
 
 brewUpdate utilizes macOS's built-in launchd to schedule and run the Homebrew `update`, `upgrade`, and `cleanup` commands. It also creates a log for each operation, which can be found in the ~/Library/Logs/brewUpdate directory. Old logs are automatically deleted after 30 days.
 
-## Installation
+## Requirements
 
-### Prerequisites
-Make sure you have Homebrew installed on your macOS system. If not, install it using:
+Make sure you have [Homebrew](https://brew.sh/) installed on your device. If not, install it first.
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### Install brewUpdate
-Clone the repository to your local machine:
+## Installation
+
+You can clone the repository wherever you want, I usually keep it in ~/Projects/
+
 ```bash
 git clone https://github.com/maximlevey/brewUpdate.git
 ```
 
-Navigate into the brewUpdate directory:
+`CD` to the brewUpdate directory, set the `installBrewUpdate.sh` script as executable and run.
+
 ```bash
-cd brewUpdate
+cd brewUpdate && chmod +x installBrewUpdate.sh && ./installBrewUpdate.sh
 ```
+During the installation, you will be prompted to enter the update frequency in hours. For example, if you want brewUpdate to run every day, you would enter `24`
 
-Set the installation script as executable:
-```bash
-chmod +x installBrewUpdate.sh
-```
+## Uninstall brewUpdate
+If you want to uninstall brewUpdate, first unload the launch agent then remove the brewUpdate directory.
 
-Run the installation script:
-```bash
-./installBrewUpdate.sh
-```
-
-During the installation, you will be prompted to enter the update frequency in hours. For example, if you want brewUpdate to run every day, you would enter 24.
-
-### Uninstall brewUpdate
-If you want to uninstall brewUpdate, you can unload the launch agent and remove the brewUpdate directory by running the following command:
 ```bash
 launchctl unload ~/Library/LaunchAgents/brewUpdate.plist && rm -rf ~/Library/brewUpdate
 ```
+
+## Get in touch
+
+If you have any questions about newMac, feel free to shoot me a message on [LinkedIn](https://www.linkedin.com/in/maximlevey/) or in the [Mac Admins Slack.](https://macadmins.slack.com)
 
 ## License
 
