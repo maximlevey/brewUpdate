@@ -8,28 +8,28 @@ brewUpdate utilizes macOS's built-in launchd to schedule and run the Homebrew `u
 
 ### Prerequisites
 Make sure you have Homebrew installed on your macOS system. If not, install it using:
-```
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
 ### Install brewUpdate
 Clone the repository to your local machine:
-```
+```bash
 git clone https://github.com/maximlevey/brewUpdate.git
 ```
 
 Navigate into the brewUpdate directory:
-```
+```bash
 cd brewUpdate
 ```
 
 Set the installation script as executable:
-```
+```bash
 chmod +x installBrewUpdate.sh
 ```
 
 Run the installation script:
-```
+```bash
 ./installBrewUpdate.sh
 ```
 
@@ -37,7 +37,7 @@ During the installation, you will be prompted to enter the update frequency in h
 
 ### Uninstall brewUpdate
 If you want to uninstall brewUpdate, you can unload the launch agent and remove the brewUpdate directory by running the following command:
-```
+```bash
 launchctl unload ~/Library/LaunchAgents/brewUpdate.plist && rm -rf ~/Library/brewUpdate
 ```
 
