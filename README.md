@@ -36,7 +36,7 @@ launchctl unload ~/Library/LaunchAgents/brewUpdate.plist && rm -rf ~/Library/bre
 
 ## Get in touch
 
-If you have any questions about newMac, feel free to shoot me a message on [LinkedIn](https://www.linkedin.com/in/maximlevey/) or in the [Mac Admins Slack.](https://macadmins.slack.com)
+If you have any questions about brewUpdate, feel free to shoot me a message on [LinkedIn](https://www.linkedin.com/in/maximlevey/) or in the [Mac Admins Slack.](https://macadmins.slack.com)
 
 ## License
 
